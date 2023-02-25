@@ -32,8 +32,8 @@ public class DriverServiceImpl implements DriverService {
 		cab.setAvailable(true);
 		cab.setDriver(driver);
 
-		driver.setCab(cab);
-		cabRepository3.save(cab);
+		//driver.setCab(cab);  --? driver is a child, so no need
+		//cabRepository3.save(cab);   --> with cascading effect it will be saved
 		driverRepository3.save(driver);
 	}
 
